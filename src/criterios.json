@@ -1,0 +1,24 @@
+{
+  "Bolsa Família": {
+    "renda_per_capita_max": 218.0,
+    "cad_unico_required": true,
+    "condicionalidades": []
+  },
+  "BPC": {
+    "idade_min_idoso": 65,
+    "renda_per_capita_max_frac_salario_minimo": 0.25,
+    "cad_unico_required": true,
+    "no_acumulo": [
+      "aposentadoria",
+      "pensão"
+    ]
+  },
+  "Pe-de-Meia": {
+    "faixa_etaria": "14 a 24 anos",
+    "cad_unico_required": true,
+    "matricula_publica_required": true,
+    "frequencia_minima_percent": 80,
+    "cpf_required": true,
+    "inscricao_automatica": false
+  }
+}
