@@ -1,0 +1,45 @@
+{
+  "programas_sociais": [
+    {
+      "programa": "Bolsa Família",
+      "rotulos": {
+        "renda": {
+          "tipo": "renda_per_capita",
+          "limite": 218.0,
+          "descricao": "Famílias com renda mensal per capita de até R$ 218.00."
+        },
+        "idade": {},
+        "familia": {
+          "cadastro_unico": true,
+          "descricao": "Famílias inscritas no Cadastro Único, com crianças, gestantes ou adolescentes."
+        },
+        "condicionalidades": [],
+        "restricoes": {}
+      },
+      "categoria_gerada": "Baixa Renda"
+    },
+    {
+      "programa": "BPC",
+      "rotulos": {
+        "renda": {
+          "tipo": "renda_per_capita",
+          "limite": "≤ 1/4 do salário mínimo",
+          "descricao": "Famílias com renda mensal per capita de até 1/4 do salário mínimo."
+        },
+        "idade": {
+          "minima": 65,
+          "descricao": "Destinado a idosos com 65 anos ou mais e pessoas com deficiência."
+        },
+        "familia": {
+          "cadastro_unico": true,
+          "descricao": "Necessário estar inscrito no Cadastro Único e comprovar situação socioeconômica."
+        },
+        "condicionalidades": [],
+        "restricoes": {
+          "descricao": "Não pode acumular com aposentadoria ou pensão."
+        }
+      },
+      "categoria_gerada": "Terceira Idade"
+    }
+  ]
+}
