@@ -2,3 +2,5 @@ ipykernel
 requests
 beautifulsoup4
 pandas
+google-genai
+panel
