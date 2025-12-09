@@ -4,7 +4,6 @@ import requests
 pn.config.theme = 'dark'
 
 
-# --- Função que conversa com o RAGflow ---
 def query_ragflow(question: str):
     url = "http://localhost:8000/api/v1/rag/chat"  
 
