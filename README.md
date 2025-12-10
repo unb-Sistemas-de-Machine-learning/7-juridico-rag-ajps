@@ -19,9 +19,9 @@ Antes de iniciar, certifique-se de ter instalado:
 ### 1Clone ou baixe este repositório
 
 ```bash
-git clone https://github.com/unb-Sistemas-de-Machine-learning/JurisSocial.git
+git clone https://github.com/unb-Sistemas-de-Machine-learning/Grupo-8-JurisSocial-docs.git
 
-cd JurisSocial
+cd Grupo-8-JurisSocial-ajps
 ```
 
 ### Criar ambiente virtual
@@ -34,6 +34,15 @@ source .venv/bin/activate   # Linux/MacOS
 ### Instalar dependências
 ```bash
 pip install -r requirements.txt
+```
+
+### Criar .Env com as variáveis de Ambiente
+```bash
+# Exemplo de configuração para RagFlow
+RAGFLOW_SERVER=https://seu-servidor-ragflow.exemplo
+RAGFLOW_API_KEY=insira_sua_api_key_aqui
+RAGFLOW_AGENT_ID=insira_seu_agent_id_aqui
+RAGFLOW_SESSION_ID=
 ```
 
 ## 2. ChatBot
