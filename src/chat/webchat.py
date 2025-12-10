@@ -12,10 +12,21 @@ pn.config.theme = 'default'
 pn.config.sizing_mode = 'stretch_width'
 
 # Configurações do RagFlow (via variáveis de ambiente)
-RAGFLOW_SERVER = os.getenv("RAGFLOW_SERVER", "https://ragflow.arthrok.shop")
-RAGFLOW_API_KEY = os.getenv("RAGFLOW_API_KEY", "ragflow-Y3NmUwNGIwZDU3MTExZjA5NzIxODZkZD")
-RAGFLOW_AGENT_ID = os.getenv("RAGFLOW_AGENT_ID", "f248dd4ad51611f0aec786dd45181ac0")  # Flow ID = Agent ID
-RAGFLOW_SESSION_ID = os.getenv("RAGFLOW_SESSION_ID", "")  # Opcional - se vazio, cria nova sessão automaticamente
+RAGFLOW_SERVER = os.getenv("RAGFLOW_SERVER")
+RAGFLOW_API_KEY = os.getenv("RAGFLOW_API_KEY")
+RAGFLOW_AGENT_ID = os.getenv("RAGFLOW_AGENT_ID")  
+RAGFLOW_SESSION_ID = os.getenv("RAGFLOW_SESSION_ID", "")  
+
+# Validar se as variáveis obrigatórias estão configuradas
+if not RAGFLOW_SERVER or not RAGFLOW_API_KEY or not RAGFLOW_AGENT_ID:
+    raise ValueError(
+        "Erro: Variáveis de ambiente do RAGFlow não configuradas!\n"
+        "Por favor, crie um arquivo .env na raiz do projeto com:\n"
+        "RAGFLOW_SERVER=...\n"
+        "RAGFLOW_API_KEY=...\n"
+        "RAGFLOW_AGENT_ID=...\n"
+        "Veja .env.example para mais detalhes."
+    )
 
 # Endpoint da API para Agents (baseado na documentação oficial)
 RAGFLOW_API_URL = f"{RAGFLOW_SERVER}/api/v1/agents/{RAGFLOW_AGENT_ID}/completions"
@@ -32,16 +43,7 @@ def validar_resposta_consistencia(resposta: str) -> str:
     Esta função NÃO modifica a resposta, apenas adiciona um aviso se detectar
     inconsistência. A correção real deve ser feita no prompt do RagFlow.
     """
-    # Esta função pode ser expandida para detectar padrões de inversão
-    # Por enquanto, apenas retorna a resposta original
-    # Em produção, você pode adicionar lógica de detecção aqui se necessário
-    
-    # Exemplo de detecção (descomente se necessário):
-    # if "idoso" in resposta.lower() and "65" in resposta:
-    #     if "não" in resposta.lower()[:resposta.lower().find("idoso")] and "elegível" in resposta.lower():
-    #         # Possível inversão detectada
-    #         pass
-    
+   
     return resposta
 
 

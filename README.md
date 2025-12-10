@@ -1,5 +1,5 @@
-# 7-juridico-rag-ajps
-# Chatbot Gemini Pro com Panel
+# JurisSocial
+## Agente Jurídico para Programas Sociais
 
 Este projeto demonstra a integração do **Gemini API (Google AI)** com a biblioteca **Panel**, criando uma interface de chat interativa que responde em tempo real.
 
@@ -19,9 +19,9 @@ Antes de iniciar, certifique-se de ter instalado:
 ### 1Clone ou baixe este repositório
 
 ```bash
-git clone https://github.com/unb-Sistemas-de-Machine-learning/7-juridico-rag-ajps.git
+git clone https://github.com/unb-Sistemas-de-Machine-learning/JurisSocial.git
 
-cd 7-juridico-rag-ajps
+cd JurisSocial
 ```
 
 ### Criar ambiente virtual
